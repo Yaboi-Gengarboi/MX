@@ -1,3 +1,5 @@
+
+
 /*
 Players with damage at or above 100 will experience Rage.
 It has several effects but primarily it increases the knockback
