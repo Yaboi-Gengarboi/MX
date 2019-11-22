@@ -124,14 +124,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Fighter.cpp" />
-    <ClCompile Include="functions.cpp" />
+    <ClCompile Include="Knockback.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="player.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fighter.hpp" />
-    <ClInclude Include="hitbox.hpp" />
-    <ClInclude Include="player.hpp" />
+    <ClInclude Include="Hitbox.hpp" />
+    <ClInclude Include="Knockback.hpp" />
+    <ClInclude Include="Player.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

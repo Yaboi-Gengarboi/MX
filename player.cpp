@@ -1,25 +1,40 @@
-
-
 /*
-Players with damage at or above 100 will experience Rage.
-It has several effects but primarily it increases the knockback
-modifier m by 0.1 (10%).
+Player.cpp
+Justyn P. Durnford
+Created on 11/21/2019
+Last updated on 11/21/2019
 */
-bool rage()
+
+#include "Player.hpp"
+
+Player::Player(const string& name)
 {
-	//if (damage >= 100.0)
-		//return true;
+	_name = name;
+}
+
+Fighter Player::getFighter()
+{
+	return _fighter;
+}
+
+bool Player::rage()
+{
+	if (_damage >= 100)
+		return true;
 	return false;
 }
 
-/*
-Crouching is an action state in which the character crouches
-to shorten their hurtbox. Additionally, it reduces the knockback
-modifier m by 0.2 (20%).
-*/
-bool isCrouching()
+bool Player::isCrouching(/* const unsigned short int& actionState*/)
 {
-	//if (getActionState() == "crouch")
-		//return true;
 	return false;
+}
+
+double Player::getDamage()
+{
+	return _damage;
+}
+
+void Player::setDamage(double damage)
+{
+	_damage = damage;
 }
