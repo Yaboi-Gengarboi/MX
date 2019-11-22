@@ -10,6 +10,7 @@ const double pi = 3.1415926535897;
 #include <cmath>
 using std::sin;
 using std::cos;
+using std::ceil;
 
 #include "knockback.hpp"
 #include "Player.hpp"
@@ -33,11 +34,12 @@ double knockback(const Hitbox& hb, Player& p1, Player& p2)
 	return kb;
 }
 
-int hitstun(double kb) //Attack a
+unsigned int hitstun(const Hitbox& hb, double kb)
 {
-	int hs = 0;
-	hs = (int)ceil(kb * 0.385);
-	//hs += a.getHistunModifier();
+	unsigned int hs = (int)ceil(kb * 0.4);
+	if (hs < 5)
+		hs = 5;
+	hs += hb.hitstunModifier;
 	return hs;
 }
 
