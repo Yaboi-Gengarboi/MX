@@ -2,7 +2,7 @@
 Knockback.cpp
 Justyn P. Durnford
 Created on 11/21/2019
-Last updated on 11/21/2019
+Last updated on 11/22/2019
 */
 
 const double pi = 3.1415926535897;
@@ -43,25 +43,23 @@ unsigned int hitstun(const Hitbox& hb, double kb)
 	return hs;
 }
 
-int hitlag() //Attack a
+unsigned int hitlag(const Hitbox& hb)
 {
 	int hl = 0;
-	//hl = (int)ceil((a.getDamage() *= 0.5) + 3);
-	//hl += a.getHitlagModifier();
+	hl = (int)ceil((hb.damage * 0.5) + 3);
+	if (hl < 5)
+		hl = 5;
+	hl += hb.hitlagModifier;
 	return hl;
 }
 
-/* This is the standard method of applying velocity to a player 
-with knockback. The value determined by knockback will */
-void setInitialVelocity(double kb) //Attack a
+void setInitialVelocity(const Hitbox& hb, double kb)
 {
-	//double angle = a.getAngle() * pi / 180.0;
-	//double x = 0.03 * kb * cos(angle);
-	//double y = 0.03 * kb * sin(angle);
+	double angle = hb.angle * pi / 180.0;
+	double x = 0.03 * kb * cos(angle);
+	double y = 0.03 * kb * sin(angle);
 }
 
-/* This is an alternative way of applying velocity to a player by
-giving specific x and y values. */
 void setInitialVelocity(double x, double y)
 {
 

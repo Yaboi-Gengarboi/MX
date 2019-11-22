@@ -2,7 +2,7 @@
 Knockback.hpp
 Justyn P. Durnford
 Created on 11/21/2019
-Last updated on 11/21/2019
+Last updated on 11/22/2019
 */
 
 #ifndef KNOCKBACK_HPP
@@ -21,5 +21,19 @@ double knockback(const Hitbox& hb, Player& p1, Player& p2);
 to act after being hit by an attack as they are launched. It is directly
 proportional to knockback. */
 unsigned int hitstun(const Hitbox& hb, double kb);
+
+/* Hitlag is the period of time, in frames, where both the player who
+dealt an attack and who was attacked are frozen in place before the attacked is
+launched. It is directly proportional to damage. */
+unsigned int hitlag(const Hitbox& hb);
+
+/* This is the standard method of applying velocity to a player
+with knockback. The value determined by knockback will be adjusted
+to set x and y values for movement. */
+void setInitialVelocity(const Hitbox& hb, double kb);
+
+/* This is an alternative way of applying velocity to a player by
+giving specific x and y values. */
+void setInitialVelocity(double x, double y);
 
 #endif
