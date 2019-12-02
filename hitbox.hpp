@@ -2,7 +2,7 @@
 Hitbox.hpp
 Justyn P. Durnford
 Created on 11/21/2019
-Last updated on 11/21/2019
+Last updated on 12/2/2019
 */
 
 #ifndef HITBOX_HPP
@@ -24,7 +24,7 @@ struct Hitbox
 	int hitstunModifier;
 	int hitlagModifier;
 
-	// Location values
+	// 2Location values
 	int x_off;
 	int y_off;
 	int z_off;

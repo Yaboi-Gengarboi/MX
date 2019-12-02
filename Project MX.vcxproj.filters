@@ -21,10 +21,10 @@
     <ClCompile Include="Fighter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
+    <ClCompile Include="Knockback.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Knockback.cpp">
+    <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -39,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Knockback.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

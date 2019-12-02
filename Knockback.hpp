@@ -2,12 +2,13 @@
 Knockback.hpp
 Justyn P. Durnford
 Created on 11/21/2019
-Last updated on 11/22/2019
+Last updated on 12/2/2019
 */
 
 #ifndef KNOCKBACK_HPP
 #define KNOCKBACK_HPP
 
+#include "Include.hpp"
 #include "Hitbox.hpp"
 #include "Player.hpp"
 

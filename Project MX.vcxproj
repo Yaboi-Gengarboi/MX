@@ -131,6 +131,7 @@
   <ItemGroup>
     <ClInclude Include="Fighter.hpp" />
     <ClInclude Include="Hitbox.hpp" />
+    <ClInclude Include="Include.hpp" />
     <ClInclude Include="Knockback.hpp" />
     <ClInclude Include="Player.hpp" />
   </ItemGroup>

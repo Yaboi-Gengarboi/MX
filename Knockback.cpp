@@ -2,17 +2,11 @@
 Knockback.cpp
 Justyn P. Durnford
 Created on 11/21/2019
-Last updated on 11/22/2019
+Last updated on 12/2/2019
 */
 
-const double pi = 3.1415926535897;
-
-#include <cmath>
-using std::sin;
-using std::cos;
-using std::ceil;
-
-#include "knockback.hpp"
+#include "Include.hpp"
+#include "Knockback.hpp"
 #include "Player.hpp"
 
 double knockback(const Hitbox& hb, Player& p1, Player& p2)

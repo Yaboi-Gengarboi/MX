@@ -1,15 +1,26 @@
 /*
 Player.cpp
 Justyn P. Durnford
-Created on 11/21/2019
-Last updated on 11/21/2019
+Created on 12/2/2019
+Last Updated on 12/2/2019
 */
 
+#include "Include.hpp"
 #include "Player.hpp"
+#include "Fighter.hpp"
 
-Player::Player(const string& name)
+#include <string>
+using std::string;
+
+Player::Player()
+{
+
+}
+
+Player::Player(string name, Fighter& fighter)
 {
 	_name = name;
+	_fighter = fighter;
 }
 
 Fighter Player::getFighter()
@@ -24,7 +35,7 @@ bool Player::rage()
 	return false;
 }
 
-bool Player::isCrouching(/* const unsigned short int& actionState*/)
+bool Player::isCrouching()
 {
 	return false;
 }
